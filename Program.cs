@@ -1,4 +1,11 @@
-﻿using System;
+﻿//program.cs
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
 Console.WriteLine("Hello, World!");
 
@@ -142,9 +149,10 @@ try
 catch (InvalidOperationException ex)
 {
     Console.WriteLine($"Business rule: {ex.Message}");
-}
+} 
 
-List<Student> students = [
+List<Student> students =
+[
     new Student { Id = "S1", Name = "Abeba", Age = 22, GPA = 3.8m },
     new Student { Id = "S2", Name = "Kidane", Age = 21, GPA = 2.4m },
     new Student { Id = "S3", Name = "Dawit", Age = 20, GPA = 3.1m },
@@ -167,7 +175,6 @@ foreach (var name in leaderboard)
 {
     Console.WriteLine($"- {name}");
 }
-
 
 decimal averageGpa = students.Average(s => s.GPA);
 
@@ -193,7 +200,6 @@ foreach (var group in standingGroups)
     }
 }
 
-
 string[] backendCourses = ["C#", "ASP.NET Core"];
 string[] frontendCourses = ["TypeScript", "Angular"];
 
@@ -205,3 +211,4 @@ string[] allCourses =
 ];
 
 Console.WriteLine($"\nFull curriculum: {string.Join(", ", allCourses)}");
+
